@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pagoTotal;
+        let diasTrabajados = 28;
+        let valorDia = 100000;
+        let subtransporte = 50000;
+        let salario = 4000000; 
+        let sueldo;
+        let arl;
+        let pension;
+        let salud;
+        let retencion;
+        let deducibles;
+        sueldo = diasTrabajados * valorDia;
+        if (salario > 2600000) {
+            sueldo = salario + subtransporte;
+        } else {
+            sueldo = salario;
+        }
+        salud = salario * 0.12;
+        pension = sueldo * 0.16; 
+        arl = sueldo * 0.052;
+       if (salario > 5200000) {  
+            retencion = salario * 0.04;
+        } else {  retencion = 0;}
+        console.log("sueldo = " + sueldo);
+        console.log("salud =" + salud);
+        console.log("pension =" + pension);
+        console.log("arl =" + arl);
+        console.log("retencion =" + retencion);
+        deducibles = (salud + pension + arl);
+        console.log("deducibles: " + deducibles);1
+        pagoTotal = salario - deducibles;
+        console.log("El pago Total es de: " +"$"+ pagoTotal);
+    </script> 
+</body>
+</html>

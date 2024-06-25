@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let numero1 = 1;
+let numero2 = 5;
+let numero3 = 1;
+let numero4 = 5;
+let contarPar = 0;
+let contarImpar = 0;
+while (numero1 <= numero2)
+   {while (numero3 <= numero4) {
+        let resultado = numero1 * numero3;
+        console.log(numero1 + " * " + numero3 + " = " + resultado);
+
+ if (resultado % 2 === 0) {
+            console.log("buzz");
+            contarPar++;
+        } else {
+            console.log("bazz");
+            contarImpar++;
+        }
+        numero3++;
+    }
+    numero3 = 1;
+    numero1++;
+}
+console.log("Cantidad de resultados pares: " + contarPar);
+console.log("Cantidad de resultados impares: " + contarImpar);
+ </script>
+        </html>
